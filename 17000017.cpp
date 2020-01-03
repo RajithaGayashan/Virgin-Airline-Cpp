@@ -35,9 +35,21 @@ int main(){
 
 	switch(n){
 		case 1:
-			cout<<"~~~Display available flights~~~"<<endl;		
+			cout<<"~~~Display available flights~~~"<<endl;	
+			if(aSeat>0){
+				cout<<"Flight number - "<<flightnumber<<endl;
+				cout<<"departure date and time - "<<datetime<<endl;
+				cout<<"departure airport code - "<<dairportcode<<endl;
+				cout<<"arrival airport code - "<<aairportcode<<endl;
+				cout<<"Number of seat available - "<<aSeat<<endl;
+				
+				
+			}	
 		case 2:
 			cout<<"~~~View flight~~~"<<endl;
+					
+		case 3:
+			cout<<"~~~Seat availability~~~"<<endl;		
 			cout<<"Enter flight number :- ";
 			cin>>fNumber;
 			cout<<"do you want number of seats? -: ";
@@ -48,9 +60,7 @@ int main(){
 			}
 			else{
 				cout<<"This flight is full"<<endl;
-			}		
-		case 3:
-			cout<<"~~~Seat availability~~~"<<endl;		
+			}
 		case 4:
 			cout<<"~~~Seat booling~~~"<<endl;		
 		case 5:
