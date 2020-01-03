@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int n,d,m,y;
+int n,seat,aSeat;
 char fNumber[10];
 char dAirport[20];
 char aAirport[20];
@@ -12,42 +12,53 @@ int main(){
 	cout<<"Enter arrival airport :-";
 	cin>>aAirport;
 	
-	cout<<"Enter flight number :- ";
-	cin>>fNumber;
+	
    int d;
    int m;
    int y;
-//   cout<<"enter date and / "<<endl;
-//   std::cin >> d; // read the day
-//   if ( std::cin.get() != '/' ) // make sure there is a slash between DD and MM
-//   {
-//      std::cout << "You entered wrong format/\n";
-//      return 1;
-//   }
-//    std::cin >> m; // read the month
-//   if ( std::cin.get() != '/' ) // make sure there is a slash between MM and YYYY
-//   {
-//      std::cout << "You entered wrong format /\n";
-//      return 1;
-//   }
-//   std::cin >> y; // read the year
-//   std::cout << "input date: " << d << "/" << m << "/" << y << "\n";
-	cout<<"Enter date and time(DD/MM/YYYY)"<<endl;
-	cin>>d;
-	cout>>"/";
-	cin>>m;
-	cout>>"/";
-	cin>>y;
-	cout>>"/";
+   cout<<"enter date and / "<<endl;
+   std::cin >> d; // read the day
+   if ( std::cin.get() != '/' ) // make sure there is a slash between DD and MM
+   {
+      std::cout << "You entered wrong format/\n";
+      return 1;
+   }
+    std::cin >> m; // read the month
+   if ( std::cin.get() != '/' ) // make sure there is a slash between MM and YYYY
+   {
+      std::cout << "You entered wrong format /\n";
+      return 1;
+   }
+   std::cin >> y; // read the year
+   std::cout << "input date: " << d << "/" << m << "/" << y << "\n";
+
+	switch(n){
+		case 1:
+			cout<<"~~~Display available flights~~~"<<endl;		
+		case 2:
+			cout<<"~~~View flight~~~"<<endl;
+			cout<<"Enter flight number :- ";
+			cin>>fNumber;
+			cout<<"do you want number of seats? -: ";
+			cin>>seat;
+			if(seat<=aSeat){
+				cout<<"success !"<<endl;
+				aSeat=aSeat-seat;
+			}
+			else{
+				cout<<"This flight is full"<<endl;
+			}		
+		case 3:
+			cout<<"~~~Seat availability~~~"<<endl;		
+		case 4:
+			cout<<"~~~Seat booling~~~"<<endl;		
+		case 5:
+			break;
+		case 6:
+			cout<<"Display available flights"<<endl;		
+		
 	
 	
-	
-//	switch(n){
-//		case 1:
-//		
-//		
-//	
-//	
-//	}
+	}
 
 }
