@@ -7,6 +7,7 @@ char aAirport[20];
 
 int main(){
 	cout<<"~~~~~~ Welcome to Virgin Airline ~~~~~~~"<<endl;
+	cout<<"''''':MAIN MANU:'''''"<<endl; 
 	cout<<"Enter departure airport :-";
 	cin>>dAirport;
 	cout<<"Enter arrival airport :-";
