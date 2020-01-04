@@ -1,4 +1,5 @@
 #include<iostream>
+#include <fstream> 
 using namespace std;
 int n,seat,aSeat;
 char fNumber[10];
@@ -6,6 +7,11 @@ char dAirport[20];
 char aAirport[20];
 
 int main(){
+std::ofstream outfile ("flight.txt");
+//outfile << "my text here!" << std::endl;
+cout<<outfile;
+outfile.close();
+
 	cout<<"~~~~~~ Welcome to Virgin Airline ~~~~~~~"<<endl;
 	cout<<"''''':MAIN MANU:'''''"<<endl; 
 	cout<<"Enter departure airport :-";
@@ -37,17 +43,25 @@ int main(){
 		case 1:
 			cout<<"~~~Display available flights~~~"<<endl;	
 			if(aSeat>0){
-				cout<<"Flight number - "<<flightnumber<<endl;
-				cout<<"departure date and time - "<<datetime<<endl;
-				cout<<"departure airport code - "<<dairportcode<<endl;
-				cout<<"arrival airport code - "<<aairportcode<<endl;
-				cout<<"Number of seat available - "<<aSeat<<endl;
-				
+//				cout<<"Flight number - "<<flightnumber<<endl;
+//				cout<<"departure date and time - "<<datetime<<endl;
+//				cout<<"departure airport code - "<<dairportcode<<endl;
+//				cout<<"arrival airport code - "<<aairportcode<<endl;
+//				cout<<"Number of seat available - "<<aSeat<<endl;
+//				
 				
 			}	
 		case 2:
 			cout<<"~~~View flight~~~"<<endl;
-					
+			cout<<"Enter flight number :- ";
+			cin>>fNumber;
+//			if(flight==true){
+//				cout<<aSeat<<endl;
+//				cout<<dairport<<endl;
+//				cout<<aairport<<endl;
+//				cout<<
+//			}
+//					
 		case 3:
 			cout<<"~~~Seat availability~~~"<<endl;		
 			cout<<"Enter flight number :- ";
