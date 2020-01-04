@@ -1,7 +1,7 @@
 #include<iostream>
 #include <fstream> 
 using namespace std;
-int n,seat,aSeat,i;
+int seat,aSeat,i,k=10;
 char fNumber[10];
 char dAirport[20];
 char aAirport[20];
@@ -14,6 +14,7 @@ outfile.close();
 
 	cout<<"~~~~~~ Welcome to Virgin Airline ~~~~~~~"<<endl;
 	cout<<"''''':MAIN MANU:'''''"<<endl; 
+	
 	cout<<"Enter departure airport :-";
 	cin>>dAirport;
 	cout<<"Enter arrival airport :-";
@@ -52,8 +53,16 @@ outfile.close();
    }
    std::cin >> y; // read the year
    std::cout << "input date: " << d << "/" << m << "/" << y << "\n";
-
-	switch(n){
+	
+	while(k!=5){
+	cout<<"1.Display available flights"<<endl;
+	cout<<"2.View flight"<<endl;
+	cout<<"3.Seat availability"<<endl;
+	cout<<"4.Seat booking"<<endl;
+	cout<<"5.Exit"<<endl;
+	cout<<"Enter your choice : ";
+	cin>>k;
+	switch(k){
 		case 1:
 			cout<<"~~~Display available flights~~~"<<endl;	
 			if(aSeat>0){
@@ -64,7 +73,8 @@ outfile.close();
 //				cout<<"Number of seat available - "<<aSeat<<endl;
 //				
 				
-			}	
+			}
+			break;	
 		case 2:
 			cout<<"~~~View flight~~~"<<endl;
 			cout<<"Enter flight number :- ";
@@ -79,7 +89,7 @@ outfile.close();
 				cout<<"No this flight "<<endl;
 				
 //          }
-//					
+			break;		
 		case 3:
 			cout<<"~~~Seat availability~~~"<<endl;		
 			cout<<"Enter flight number :- ";
@@ -93,6 +103,7 @@ outfile.close();
 			else{
 				cout<<"This flight is full"<<endl;
 			}
+			break;
 		case 4:
 			cout<<"~~~Seat booling~~~"<<endl;
 			cout<<"Enter flight number :- ";
@@ -100,22 +111,17 @@ outfile.close();
 			cout<<"Seat location :- ";
 			cin>>location;
 			
-			for(i=1;i>=60;i++){
-				for(char a='a'; a < 'a' + 24; ++a){
-    		
-					cout <<i<<"-"<< a<<"/t";
-					
-				}		
+			for(i=1;i<=60;i++){
+				for(char a='a'; a < 'a' +6; ++a){
+    				cout <<i<<"-"<< a<<"\n";
+				}
+				cout<<endl;		
 			}
-				
-					
+			break;
 		case 5:
 			break;
-		case 6:
-			cout<<"Display available flights"<<endl;		
-		
-	
-	
+		default:
+			cout<<"Invaliad input"<<endl;
+	}		
 	}
-
 }
