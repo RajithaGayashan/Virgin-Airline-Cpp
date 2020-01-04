@@ -1,11 +1,11 @@
 #include<iostream>
 #include <fstream> 
 using namespace std;
-int n,seat,aSeat;
+int n,seat,aSeat,i;
 char fNumber[10];
 char dAirport[20];
 char aAirport[20];
-
+char location[65];
 int main(){
 std::ofstream outfile ("flight.txt");
 //outfile << "my text here!" << std::endl;
@@ -19,7 +19,21 @@ outfile.close();
 	cout<<"Enter arrival airport :-";
 	cin>>aAirport;
 	
-	
+	int h;
+	int min;
+	cout<<"enter time and : "<<endl;
+	std::cin >> h; 
+   		if ( std::cin.get() != ':' ) 
+   		{
+      		std::cout << "You entered wrong format/\n";
+      		return 1;
+   		}
+    std::cin >> min; // read the year
+    std::cout << "input time: " << h<< ":" << min<<endl;
+			
+
+
+
    int d;
    int m;
    int y;
@@ -56,11 +70,15 @@ outfile.close();
 			cout<<"Enter flight number :- ";
 			cin>>fNumber;
 //			if(flight==true){
-//				cout<<aSeat<<endl;
-//				cout<<dairport<<endl;
-//				cout<<aairport<<endl;
-//				cout<<
-//			}
+//				cout<<"Number of seat available- "<<aSeat<<endl;
+//				cout<<"departure airport - "<<datetime<<endl;
+//			    cout<<"arrival airport - "<<aairport<<endl;
+//				cout<<"departure date and time - "<<datetime<<endl;
+//			
+//			}else{
+				cout<<"No this flight "<<endl;
+				
+//          }
 //					
 		case 3:
 			cout<<"~~~Seat availability~~~"<<endl;		
@@ -76,7 +94,21 @@ outfile.close();
 				cout<<"This flight is full"<<endl;
 			}
 		case 4:
-			cout<<"~~~Seat booling~~~"<<endl;		
+			cout<<"~~~Seat booling~~~"<<endl;
+			cout<<"Enter flight number :- ";
+			cin>>fNumber;
+			cout<<"Seat location :- ";
+			cin>>location;
+			
+			for(i=1;i>=60;i++){
+				for(char a='a'; a < 'a' + 24; ++a){
+    		
+					cout <<i<<"-"<< a<<"/t";
+					
+				}		
+			}
+				
+					
 		case 5:
 			break;
 		case 6:
